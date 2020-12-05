@@ -1,0 +1,14 @@
+[Unit]
+Description=Starts the Prefect Core
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=90
+User=ubuntu
+ExecStart=prefect server start --use-volume
+
+[Install]
+WantedBy=multi-user.target

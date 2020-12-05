@@ -1,0 +1,14 @@
+[Unit]
+Description=Starts the Prefect Agent
+After=prefect-core.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=90
+User=ubuntu
+ExecStart=prefect agent start --name "Default Agent"
+
+[Install]
+WantedBy=multi-user.target
