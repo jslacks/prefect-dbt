@@ -24,12 +24,7 @@ sudo apt-get install -y \
 python3-pip \
 docker.io \
 docker-compose \
-python3-venv \
-libpq-dev \
-python-dev \ 
-git \
-python3-testresources \
-launchpadlib
+git 
 ```
 
 ### Install DBT
