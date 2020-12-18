@@ -29,7 +29,7 @@ git
 
 ### Install DBT
 ```
-sudo pip install -I dbt
+sudo pip3 install -I dbt
 ```
 
 ### Add Docker permissions / add Docker to startup
