@@ -13,7 +13,7 @@ There is a requirements.txt file that shows all things needed prior to prefect i
 ### Install Updates on Ubuntu 20.04
 ```
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo apt update
 sudo apt upgrade
 sudo reboot
