@@ -2,12 +2,12 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'project_example'
 version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'dbt_elt'
+profile: 'profile_example'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -24,15 +24,33 @@ clean-targets:         # directories to be removed by `dbt clean`
     - "target"
     - "dbt_modules"
 
+# Define variables here
+vars:
+  dw_database: dw
+  dw_schema: public
+  raw_database: raw
 
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
+# Define seeds here
+seeds:
+  project_example:
+    schema: source_internal
 
-# In this example config, we tell dbt to build all models in the example/ directory
-# as tables. These settings can be overridden in the individual model files
-# using the `{{ config(...) }}` macro.
+# Define snapshots
+snapshots:
+  project_example:
+    +target_schema: public
+    +target_database: raw
+    +source_schema: public
+    +source_database: raw
+    
+# Define models
 models:
-  my_new_project:
-      # Applies to all files under models/example/
-      example:
-          materialized: view
+  project_example: 
+    1_source:
+      source_example:
+        +enabled: true # the model is enabled and will run with dbt
+        +transient: false # transient or permanent
+        +materialized: table # table or view
+        +schema: source_example # database schema to use, could use variable here
+        +database: raw # database to use, could use variable here 
+

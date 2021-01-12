@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: example
+    schema: source_example
+    tables:
+      - name: example_table_1 
+        description: "insert description here"
