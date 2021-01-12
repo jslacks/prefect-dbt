@@ -13,7 +13,7 @@ There is a requirements.txt file that shows all things needed prior to prefect i
 ### Install Updates on Ubuntu 20.04
 ```
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo apt update
 sudo apt upgrade
 sudo reboot
@@ -24,17 +24,12 @@ sudo apt-get install -y \
 python3-pip \
 docker.io \
 docker-compose \
-python3-venv \
-libpq-dev \
-python-dev \ 
-git \
-python3-testresources \
-launchpadlib
+git 
 ```
 
 ### Install DBT
 ```
-sudo pip install -I dbt
+sudo pip3 install -I dbt
 ```
 
 ### Add Docker permissions / add Docker to startup
