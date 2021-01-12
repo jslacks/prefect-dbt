@@ -1,0 +1,16 @@
+1. Install DBT
+2. Create Initial Project
+3. Setup DBT Profile
+4. Copy Macros over
+5. Copy data/date.csv over
+6. Discuss sources Example: from {{ source('example','example_table_1') }}
+7. Discuss references Example: from {{ ref('stg_dim_date') }}
+8. Discuss documentation dbt docs generate; dbt docs serve;
+9. Discuss Models vs. Snapshots and strategies
+10. Modify dbt_project.yml & setup variables
+11. Run a Seed
+12. Run a Model
+13. Run a Snapshot
+14. Generate docs
+15. Serve docs
+
