@@ -54,6 +54,9 @@ sudo vi /etc/fstab
 goofys#s3bucketname1 /home/ubuntu/s3_snowflake fuse _netdev,allow_other,--file-mode=0666,--dir-mode=0777 0 0
 
 goofys#s3bucketname2 /home/ubuntu/s3_github fuse _netdev,allow_other,--file-mode=0666,--dir-mode=0777 0 0
+
+goofys#hcp-openaccess /mnt/hcp-openaccess fuse _netdev,allow_other,--file-mode=0666,--profile=hcp    0       0
+
 ```
 
 ### reboot to test setup
