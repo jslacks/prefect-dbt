@@ -27,6 +27,13 @@ docker-compose \
 git 
 ```
 
+
+### PIP Stuff
+```
+sudo pip install pandas
+sudo pip install pytz==2020.5 # ERROR: snowflake-connector-python 2.3.6 has requirement pytz<2021.0
+sudo apt install python3-testresources # ERROR: launchpadlib 1.10.13 requires testresources, which is not installed.
+```
 ### Install DBT
 ```
 sudo pip3 install -I dbt
