@@ -2,9 +2,9 @@
 
 ### Installation
 ```
-pip3 install "prefect[all_extras]"
+sudo pip3 install "prefect[aws]"
 
-sudo pip3 install "prefect[all_extras]"
+pip3 install "prefect[aws]"
 ```
 
 ### To start the server manually
