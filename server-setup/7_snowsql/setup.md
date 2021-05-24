@@ -44,3 +44,9 @@ sudo rm snowsql-1.2.14-linux_x86_64.bash
 
       snowsql
 ```
+
+# Logs
+Be sure to change the path for logs as well so you do not get permission errors in the .snowsql/config file. 
+```administrator:~$ snowsql
+Failed to initialize log. No logging is enabled: [Errno 13] Permission denied: '/home/snowsql_rt.log_bootstrap'
+Failed to initialize log. No logging is enabled: [Errno 13] Permission denied: '/home/snowsql_rt.log'```
