@@ -1,0 +1,15 @@
+ubuntu@ip-172-31-10-185:/etc/systemd/system$ cat prefect-register.service
+[Unit]
+Description=Watch Prefect Registration Changes
+After=prefect-agent.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=90
+User=ubuntu
+ExecStart=prefect register --project Production -p /home/ubuntu/s3_github/prefect-flows/ --watch
+
+[Install]
+WantedBy=multi-user.target
